@@ -1,10 +1,10 @@
 class Calculator:
 
-    def sum( self, a, b):
+    def sum(self, a, b):
         result = a+b
         return result
 
-    def sub(  a, b):
+    def sub(self, a, b):
         result = a-b
         return result
 
