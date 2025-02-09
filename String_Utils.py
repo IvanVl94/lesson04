@@ -1,4 +1,4 @@
-class string_utils:
+class StringUtils:
       
     @staticmethod
     def to_uppercase(text: str) -> str:
