@@ -7,29 +7,26 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-driver = webdriver.Chrome(service=ChromeService
-                (ChromeDriverManager().install()))
+driver = webdriver.Chrome()
 driver.maximize_window()
 
-    # Открываем страницу
-    
+# Открываем страницу
 driver.get("http://the-internet.herokuapp.com/add_remove_elements/")
-    
+
 # Находим кнопку "Add Element" и нажимаем на нее 5 раз
 
-add_button = driver.find_element(By.XPATH, 
-                "//button[text()='Add Element']")
+add_button = driver.find_element(
+    By.XPATH, "//button[text()='Add Element']")
 for _ in range(5):
     add_button.click()
-   
-#<button class="added-manually" onclick="deleteElement()">Delete</button> 
-   
-delete_buttons = driver.find_elements(By.XPATH , 
-                "//button[text()='Delete']")
-    
-    # Выводим размер списка
-    
-print(f"Количество кнопок 'Delete': {len(delete_buttons)}") 
+
+# <button class="added-manually" onclick="deleteElement()">Delete</button>
+
+delete_buttons = driver.find_elements(
+    By.XPATH, "//button[text()='Delete']")
+
+# Выводим размер списка
+print(f"Количество кнопок 'Delete': {len(delete_buttons)}")
 
 sleep(4)
 

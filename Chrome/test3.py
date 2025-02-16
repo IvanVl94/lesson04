@@ -7,8 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-driver = webdriver.Chrome(service=ChromeService
-             (ChromeDriverManager().install()))
+driver = webdriver.Chrome()
 driver.maximize_window()
 
 #Запустить 
@@ -16,8 +15,9 @@ driver.maximize_window()
 driver.get("http://uitestingplayground.com/classattr")
 
 #<button class="btn class2 btn-primary btn-test" type="button">Button</button>
-blue_button = driver.find_element(By.XPATH, 
-                "//button[contains(concat(' ', normalize-space(@class), ' '), 'btn-primary ')]")
+
+blue_button = driver.find_element(
+    By.XPATH,"//button[contains(concat(' ', normalize-space(@class), ' '), 'btn-primary ')]")
 
 
 blue_button.click()

@@ -11,22 +11,22 @@ driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()
 driver.get("http://the-internet.herokuapp.com/login")
 sleep(2)
 
-username = driver.find_element(By.ID, 
-                "userneme"
-                )
+username = driver.find_element(
+    By.ID,"userneme")
+
 username.send_keys('tomsmith')
+
 sleep(2)
 
-password = driver.find_element(By.ID, 
-                "password"
-                )
+password = driver.find_element(
+    By.ID,"password")
 
 password.send_keys('SuperSecretPassword!')
 
 #<i class="fa fa-2x fa-sign-in"> Login</i>
-login_button = driver.find_element(By.CLASS_NAME, 
-                "fa fa-2x fa-sign-in"
-                )
+
+login_button = driver.find_element(
+    By.CLASS_NAME,"fa fa-2x fa-sign-in")
 
 login_button.click()
 
